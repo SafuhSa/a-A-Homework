@@ -52,7 +52,7 @@ function madlib(verb, adj, noun) {
 // console.log(madlib('make', 'best', 'guac'));
 
 function isSubstring(str, sub) {
-  return str.includes(sub)
+  return str.includes(sub);
 }
 // console.log(isSubstring("Jump for joy", "joys"));
 
@@ -66,19 +66,47 @@ function fizzBuzz (arr) {
       result.push(num);
     }
   }
-  return result
+
+  return result;
 }
 
-console.log(fizzBuzz([9, 15,6,3 ,4]))
+// console.log(fizzBuzz([9, 15,6,3 ,4]))
 
 function  isPrime(num) {
-  return false if num < 2;
+  if (num < 2) {
+    return false;
+  }
 
   for(let i = 2; i < num; i++) {
-    return false if num % i === 0;
+    if (num % i === 0) {
+      return false;
+    }
   }
 
   return true
 }
 
-console.log(isPrime(8));
+// console.log(isPrime(8));
+// console.log(isPrime(7));
+
+function sumOfNPrimes(n) {
+  let i = 2;
+  sum = 0;
+
+  while(true) {
+  if (n <= 0) {
+    break;
+  }
+    if (isPrime(i)) {
+      sum += i;
+      n -= 1;
+    }
+    i++;
+  }
+
+  return sum;
+}
+console.log(sumOfNPrimes(0));
+console.log(sumOfNPrimes(1));
+console.log(sumOfNPrimes(4));
+
