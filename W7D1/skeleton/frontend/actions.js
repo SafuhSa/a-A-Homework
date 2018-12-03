@@ -5,5 +5,7 @@ function selectLocation(city, jobs) {
         jobs: jobs,
     }
 }
+
+
 // window.selectLocation = selectLocation
 export default selectLocation;
